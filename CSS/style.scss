@@ -77,14 +77,6 @@ object.svg_bracket {
 	display: none;
 }
 
-.top {
-	height: 29em;
-	display: block;
-	width:100%;
-	background: $brown;
-	z-index: -900;
-}
-
 body {
 	width: 100%; 
 	margin: 0 auto;
@@ -124,6 +116,14 @@ body {
 
 /* ------ Landscape Tablet / Laptop ------ */
 @media only screen and (min-width: 1024px) { 	 
+	.top {
+		height: 29.21em;
+		display: block;
+		width:100%;
+		background: $brown;
+		z-index: -900;
+	}
+
 	.c_center {
 		width: 40%;
 	}

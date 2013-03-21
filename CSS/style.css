@@ -57,13 +57,6 @@ object.svg_bracket {
 .leaf_L, .leaf_R {
   display: none; }
 
-.top {
-  height: 29em;
-  display: block;
-  width: 100%;
-  background: #837b4e;
-  z-index: -900; }
-
 body {
   width: 100%;
   margin: 0 auto; }
@@ -83,6 +76,13 @@ body {
 /* ------ Tablet / Netbook ------ */
 /* ------ Landscape Tablet / Laptop ------ */
 @media only screen and (min-width: 1024px) {
+  .top {
+    height: 29.21em;
+    display: block;
+    width: 100%;
+    background: #837b4e;
+    z-index: -900; }
+
   .c_center {
     width: 40%; }
 
