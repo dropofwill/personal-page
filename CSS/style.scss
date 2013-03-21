@@ -18,7 +18,15 @@ header {
 	max-width: 35em;
 	height: 15em;
 	margin: 0 auto;
-	color: green;
+}
+
+#content {
+	display: block;
+	position: relative;
+	padding: 1em;
+	max-width: 35em;
+	margin: 0 auto;
+	background: $highlight;
 }
 
 object.svg_header {
@@ -59,13 +67,6 @@ object.svg_flip {
 	display: none;
 }
 
-#content {
-	position: relative;
-	padding: 1em;
-	max-width: 35em;
-	margin: 0 auto;
-	background: $highlight;
-}
 
 /* ------ Base Styles ------ */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, dialog {	display: block}
@@ -80,12 +81,12 @@ html {
 	height: 100%; 
 
 	background: #d3d5ae;
-	background: -moz-linear-gradient(top, #d3d5ae 0%, #e4edbe 100%) fixed;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d3d5ae), color-stop(100%,#e4edbe)) fixed;
-	background: -webkit-linear-gradient(top, #d3d5ae 0%,#e4edbe 100%) fixed;
-	background: -o-linear-gradient(top, #d3d5ae 0%,#e4edbe 100%) fixed;
-	background: -ms-linear-gradient(top, #d3d5ae 0%,#e4edbe 100%) fixed;
-	background: linear-gradient(to bottom, #d3d5ae 0%,#e4edbe 100%) fixed;
+	// background: -moz-linear-gradient(top, #d3d5ae 0%, #e4edbe 100%) fixed;
+	// background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d3d5ae), color-stop(100%,#e4edbe)) fixed;
+	// background: -webkit-linear-gradient(top, #d3d5ae 0%,#e4edbe 100%) fixed;
+	// background: -o-linear-gradient(top, #d3d5ae 0%,#e4edbe 100%) fixed;
+	// background: -ms-linear-gradient(top, #d3d5ae 0%,#e4edbe 100%) fixed;
+	// background: linear-gradient(to bottom, #d3d5ae 0%,#e4edbe 100%) fixed;
 
 	font-size: 100%; 
 	overflow-y: scroll; /* Force scrollbar in non-IE and Remove iOS text size adjust without disabling user zoom */
@@ -256,7 +257,7 @@ sub {	bottom: -0.25em}
 /* DEFAULT MOBILE STYLE */
 body {
 	width: 100%; 
-	margin: 0 auto
+	margin: 0 auto;
 } 
 
 /* MOBILE PORTRAIT */
@@ -292,11 +293,33 @@ body {
 
 /* LANDSCAPE TABLET/NETBOOK/LAPTOP */
 @media only screen and (min-width: 1024px) { 
-	.leaf {
-		display:block; 
-		position: relative;
-		//z-index: -1;
+	.c_center {
+		width: 40%;
+	}
+
+	.c_left {
+		width: 20%;
+
 		height:29.9em;
+		background: yellow;
+	}
+
+	.c_right {
+		width: 20%;
+	}
+
+	.c_center, .c_left, .c_right {
+		display:inline; 
+		float: left;
+	}
+
+	.leaf {
+		widows: 100%;
+		height: 100%;
+		display:block; 
+		float: right;
+		//position: relative;
+		//z-index: -1;
 	} 
 }
 
