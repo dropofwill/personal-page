@@ -1,5 +1,5 @@
 /* ------ Variables ------ */
-/* ------ Specific Styles ------ */
+/* ------ Default Styles ------ */
 header {
   display: block;
   position: relative;
@@ -7,7 +7,8 @@ header {
   padding: 1em;
   max-width: 35em;
   height: 15em;
-  margin: 0 auto; }
+  margin: 0 auto;
+  z-index: 4; }
 
 #content {
   display: block;
@@ -56,6 +57,67 @@ object.svg_bracket {
 .leaf_L, .leaf_R {
   display: none; }
 
+.top {
+  height: 29em;
+  display: block;
+  width: 100%;
+  background: #837b4e;
+  z-index: -900; }
+
+body {
+  width: 100%;
+  margin: 0 auto; }
+
+/* ------ Mobile Portrait ------ */
+@media only screen and (min-width: 320px) {
+  .svg_wrapper {
+    height: 7em; } }
+/* ------ Mobile Landscape ------ */
+@media only screen and (min-width: 480px) {
+  header {
+    height: 20em; } }
+/* ------ Small Tablet ------ */
+@media only screen and (min-width: 600px) {
+  header {
+    height: 25em; } }
+/* ------ Tablet / Netbook ------ */
+/* ------ Landscape Tablet / Laptop ------ */
+@media only screen and (min-width: 1024px) {
+  .c_center {
+    width: 40%; }
+
+  .c_left {
+    width: 11.7em;
+    padding: 0;
+    height: 29.25em;
+    margin-left: -2em; }
+
+  .c_right {
+    width: 11.7em;
+    padding: 0;
+    height: 29.25em;
+    margin-left: -2.1em;
+    z-index: -2; }
+
+  .c_center, .c_left, .c_right {
+    display: inline;
+    float: left; }
+
+  .leaf_L {
+    height: 100%;
+    display: block;
+    margin-left: 0em; }
+
+  .leaf_R {
+    height: 100%;
+    display: block;
+    margin-left: 2em; }
+
+  #content {
+    margin-top: -2.4em;
+    z-index: 3; } }
+/* ------ Desktop ------ */
+/* ------ Widescreen ------ */
 /* ------ Base Styles ------ */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, dialog {
   display: block; }
@@ -235,64 +297,6 @@ sub {
   zoom: 1; }
 
 /* For IE 6/7 (trigger hasLayout) */
-/* DEFAULT MOBILE STYLE */
-body {
-  width: 100%;
-  margin: 0 auto; }
-
-/* MOBILE PORTRAIT */
-@media only screen and (min-width: 320px) {
-  .svg_wrapper {
-    height: 7em; } }
-/* MOBILE LANDSCAPE */
-@media only screen and (min-width: 480px) {
-  header {
-    height: 20em; } }
-/* SMALL TABLET */
-@media only screen and (min-width: 600px) {
-  header {
-    height: 25em; } }
-/* TABLET/NETBOOK */
-/* LANDSCAPE TABLET/NETBOOK/LAPTOP */
-@media only screen and (min-width: 1024px) {
-  .c_center {
-    width: 40%; }
-
-  .c_left {
-    width: 11.7em;
-    padding: 0;
-    height: 29.25em;
-    margin-left: -2em; }
-
-  .c_right {
-    width: 11.7em;
-    padding: 0;
-    height: 29.25em;
-    margin-left: -2.1em;
-    z-index: -2; }
-
-  .c_center, .c_left, .c_right {
-    display: inline;
-    float: left; }
-
-  .leaf_L {
-    height: 100%;
-    display: block;
-    margin-left: 0em; }
-
-  .leaf_R {
-    height: 100%;
-    display: block;
-    margin-left: 2em; }
-
-  #content {
-    margin-top: -2.4em;
-    z-index: -1; } }
-/* DESKTOP */
-/* WIDESCREEN */
-/* Increased body size for legibility */
-@media only screen and (min-width: 1400px) {
-  /* 18.5px / 28px */ }
 /* ------ Print Styles ------ */
 @media print {
   * {
