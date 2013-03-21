@@ -1,0 +1,359 @@
+/* ------ Variables ------ */
+$dark: #320017;
+$brown: #837B4E;
+$highlight: #E4EDBE;
+$grad-brown: #D3D5AE;
+
+$maven: "Maven Pro", "Century Gothic", sans-serif;
+
+/* ------ Specific Styles ------ */
+body {
+}
+
+header {
+	display: block;
+	position: relative;
+	background: $brown;
+	padding: 1em;
+	max-width: 35em;
+	height: 15em;
+	margin: 0 auto;
+}
+
+object.svg_header {
+	height:95%;
+	width:95%;
+}
+
+.svg_wrapper {
+	display:block;
+	height:5em;
+}
+
+object.svg_bracket {
+	display: block;
+	width:100%;
+	height:100%;
+}
+
+object.svg_flip {
+	-webkit-transform:rotate(180deg);
+   	   -moz-transform:rotate(180deg);
+	    -ms-transform:rotate(180deg);
+	     -o-transform:rotate(180deg);
+		    transform:rotate(180deg);
+}
+
+.project_links {
+	list-style-type: none;
+	text-align: center;
+}
+
+.project_links li {
+	display: inline;
+	font-size: 1.125em;
+}
+
+.leaf {
+	display: none;
+}
+
+#content {
+	position: relative;
+	padding: 1em;
+	max-width: 35em;
+	margin: 0 auto;
+	background: $highlight;
+}
+
+/* ------ Base Styles ------ */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, dialog {	display: block}
+
+audio[controls],canvas,video {
+	display: inline-block; 
+	*display: inline; 
+	zoom: 1;
+}
+
+html {
+	height: 100%; 
+
+	background: #d3d5ae;
+	background: -moz-linear-gradient(top, #d3d5ae 0%, #e4edbe 100%) fixed;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d3d5ae), color-stop(100%,#e4edbe)) fixed;
+	background: -webkit-linear-gradient(top, #d3d5ae 0%,#e4edbe 100%) fixed;
+	background: -o-linear-gradient(top, #d3d5ae 0%,#e4edbe 100%) fixed;
+	background: -ms-linear-gradient(top, #d3d5ae 0%,#e4edbe 100%) fixed;
+	background: linear-gradient(to bottom, #d3d5ae 0%,#e4edbe 100%) fixed;
+
+	font-size: 100%; 
+	overflow-y: scroll; /* Force scrollbar in non-IE and Remove iOS text size adjust without disabling user zoom */
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0; 
+	min-height: 100%; 
+	-webkit-font-smoothing:antialiased; /* Improve default text rendering, handling of kerning pairs and ligatures */
+	font-smoothing:antialiased; 
+	text-rendering:optimizeLegibility; 
+}
+
+body, button, input, select, textarea {
+	font: 100%/1.5 $maven; 
+	*font-size: 1em; 
+	color: $dark;
+}
+
+p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldset, menu, img {
+	margin: 0 0 1.5em; 
+	padding: 0
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $maven;
+	font-weight:900;
+	color: $dark;
+	text-shadow:1px 1px 1px rgba(0,0,0,.10);
+}
+
+h1 {
+	margin: 0; 
+	font-size: 3.75em; 
+	line-height: 1.2em; 
+	margin-bottom: 0.4em
+} /* 60px / 72px */
+
+h2 {
+	margin: 0; 
+	font-size: 3em; 
+	line-height: 1em; 
+	margin-bottom: 0.5em
+} /* 48px / 48px */
+
+h3 {
+	margin: 0; 
+	font-size: 2.25em; 
+	line-height: 1.3333em; 
+	margin-bottom: 0.6667em
+} /* 36px / 48px */ 
+
+h4 {
+	margin: 0; 
+	font-size: 1.5em; 
+	line-height: 1em; 
+	margin-bottom: 1em
+} /* 24px / 24px */
+
+h5 {
+	margin: 0; 
+	font-size: 1.3125em; 
+	line-height: 1.1429em; 
+	margin-bottom: 1.1429em
+} /* 21px / 24px */
+
+h6 {
+	margin: 0; 
+	font-size: 1.125em; 
+	line-height: 1.3333em; 
+	margin-bottom: 1.3333em
+} /* 18px / 24px */
+
+p, ul, blockquote, pre, td, th, label {
+	margin: 0; 
+	font-size: 1em; 
+	line-height: 1.5em; 
+	margin-bottom: 1.5em
+} /* 16px / 24px */
+
+small, p.small {
+	margin: 0; 
+	font-size: 0.875em; 
+	line-height: 1.7143em;
+	margin-bottom: 1.7143em
+} /* 14px / 24px */
+
+ul, ol {
+	list-style-position: inside; 
+	padding: 0
+}
+
+li ul, li ol {	margin: 0 1.5em}
+
+/* HYPERLINKS */
+a {
+	//text-decoration: none; 
+	color:$dark;
+}
+
+a:hover {
+	text-decoration: line-through;
+}
+
+a:focus {
+	outline: thin dotted
+}
+
+a:hover, a:active {
+	outline: none; /* Better CSS Outline Suppression */
+}
+
+figure {	margin: 0}
+
+img, object, embed, video {
+	max-width: 100%;
+	_width: 100%; /* Fluid images */
+} 
+
+img {
+	border: 0;	
+	-ms-interpolation-mode: bicubic; /* Improve IE's resizing of images */
+}
+
+svg:not(:root) {overflow: hidden} /* Correct IE9 overflow */
+
+::-moz-selection {
+	background: #c47529; 
+	color: #fff; 
+	text-shadow: none
+}
+
+::selection {
+	background: #c47529; 
+	color: #fff; 
+	text-shadow: none
+}
+
+strong, b, dt { 
+	font-weight: bold
+}
+
+dfn {
+	font-style: italic
+}
+
+var, address {
+	font-style: normal}
+
+sub, sup {
+	font-size: 75%; 
+	line-height: 0; 
+	position: relative; 
+	vertical-align: baseline; /* Position 'sub' and 'sup' without affecting line-height */
+}
+sup {	top: -0.5em;}
+sub {	bottom: -0.25em}
+
+/* MICRO CLEARFIX HACK */
+.cf:before, .cf:after {content:"";display:table} /* For modern browsers */
+.cf:after {clear:both}
+.cf {zoom:1} /* For IE 6/7 (trigger hasLayout) */
+
+
+
+
+/* DEFAULT MOBILE STYLE */
+body {
+	width: 100%; 
+	margin: 0 auto
+} 
+
+/* MOBILE PORTRAIT */
+@media only screen and (min-width: 320px) {
+	.svg_wrapper {
+		height:7em;
+	}
+}
+
+/* MOBILE LANDSCAPE */
+@media only screen and (min-width: 480px) {
+	header {
+		height: 20em;
+	}
+}
+
+@media only screen and (min-width: 35em) {
+	
+}
+
+/* SMALL TABLET */
+@media only screen and (min-width: 600px) {
+	header {
+		height: 25em;
+	}
+
+}
+
+/* TABLET/NETBOOK */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* LANDSCAPE TABLET/NETBOOK/LAPTOP */
+@media only screen and (min-width: 1024px) { 
+	.leaf {
+		display:block; 
+		position: relative;
+		//z-index: -1;
+		height:29.9em;
+	} 
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 1280px) { 
+
+}
+
+/* WIDESCREEN */
+/* Increased body size for legibility */
+@media only screen and (min-width: 1400px) { 
+	body {
+		font-size:116.75%; 
+	} /* 18.5px / 28px */
+}
+
+
+
+
+/* ------ Print Styles ------ */
+@media print {
+  * {
+  		background: transparent !important; /* Black prints faster */
+  		color: black !important; 
+  		text-shadow: none !important; 
+  		filter:none !important; 
+  		-ms-filter: none !important
+  	}
+
+  a, a:visited {
+  		color: #444 !important; 
+  		text-decoration: underline
+  	}
+
+  a[href]:after {
+  		content: " (" attr(href) ")"
+  	}
+
+  abbr[title]:after {
+  		content: " (" attr(title) ")"
+  	}
+
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {content: ""}  /* Don't print links for images, javascript or internal links */
+  
+  pre, blockquote {
+  		border: 1px solid #999; 
+  		page-break-inside: avoid; 
+  	}
+
+  thead { 	display: table-header-group; } /* Repeat header row at top of each printed page */
+  
+  tr, img {	page-break-inside: avoid; }
+  
+  img {		max-width: 100% !important; }
+
+  @page {	margin: 0.5cm}
+
+  p, h2, h3 {	orphans: 3; widows: 3}
+  
+  h2, h3{	page-break-after: avoid }
+}
