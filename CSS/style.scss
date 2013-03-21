@@ -45,12 +45,21 @@ object.svg_bracket {
 	height:100%;
 }
 
-object.svg_flip {
+.svg_flip {
 	-webkit-transform:rotate(180deg);
    	   -moz-transform:rotate(180deg);
 	    -ms-transform:rotate(180deg);
 	     -o-transform:rotate(180deg);
 		    transform:rotate(180deg);
+}
+
+.svg_flip_y {
+	-moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+ -webkit-transform: scaleX(-1);
+         transform: scaleX(-1);
+         filter: FlipH;
+     -ms-filter: "FlipH";
 }
 
 .project_links {
@@ -63,7 +72,7 @@ object.svg_flip {
 	font-size: 1.125em;
 }
 
-.leaf {
+.leaf_L, .leaf_R {
 	display: none;
 }
 
@@ -292,20 +301,24 @@ body {
 }
 
 /* LANDSCAPE TABLET/NETBOOK/LAPTOP */
-@media only screen and (min-width: 1024px) { 
+@media only screen and (min-width: 1024px) { 	 
 	.c_center {
 		width: 40%;
 	}
 
 	.c_left {
-		width: 20%;
-
-		height:29.9em;
-		background: yellow;
+		width: 11.7em;
+		padding: 0;
+		height:29.25em;
+		margin-left: -2em;
 	}
 
 	.c_right {
-		width: 20%;
+		width: 11.7em;
+		padding: 0;
+		height:29.25em;
+		margin-left: -2.1em;
+		z-index: -2;
 	}
 
 	.c_center, .c_left, .c_right {
@@ -313,14 +326,22 @@ body {
 		float: left;
 	}
 
-	.leaf {
-		widows: 100%;
+	.leaf_L {
 		height: 100%;
-		display:block; 
-		float: right;
-		//position: relative;
-		//z-index: -1;
+		display: block; 
+		margin-left: 0em;
 	} 
+
+	.leaf_R {
+		height: 100%;
+		display: block; 
+		margin-left: 2em;
+	} 
+
+	#content {
+		margin-top: -2.4em;
+		z-index: -1;
+	}
 }
 
 /* DESKTOP */
@@ -332,7 +353,7 @@ body {
 /* Increased body size for legibility */
 @media only screen and (min-width: 1400px) { 
 	body {
-		font-size:116.75%; 
+		//font-size:116.75%; 
 	} /* 18.5px / 28px */
 }
 
@@ -358,12 +379,6 @@ body {
   		content: " (" attr(href) ")"
   	}
 
-  abbr[title]:after {
-  		content: " (" attr(title) ")"
-  	}
-
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {content: ""}  /* Don't print links for images, javascript or internal links */
-  
   pre, blockquote {
   		border: 1px solid #999; 
   		page-break-inside: avoid; 
