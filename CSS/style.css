@@ -83,6 +83,22 @@ body {
     background: #837b4e;
     z-index: -900; }
 
+  .project_links {
+    position: absolute;
+    top: 4em;
+    left: -8em;
+    z-index: 100; }
+
+  .project_links li {
+    display: block;
+    font-size: 1.3125em;
+    line-height: 1.4429em;
+    -webkit-transform: rotate(-15deg) skewX(-14deg);
+    -moz-transform: rotate(-15deg) skewX(-14deg);
+    -ms-transform: rotate(-15deg) skewX(-14deg);
+    -o-transform: rotate(-15deg) skewX(-14deg);
+    transform: rotate(-15deg) skewX(-14deg); }
+
   .c_center {
     width: 40%; }
 
@@ -221,7 +237,6 @@ ul, ol {
 li ul, li ol {
   margin: 0 1.5em; }
 
-/* HYPERLINKS */
 a {
   color: #320017; }
 
@@ -284,7 +299,7 @@ sup {
 sub {
   bottom: -0.25em; }
 
-/* MICRO CLEARFIX HACK */
+/* ------ Clearfix Hack ------ */
 .cf:before, .cf:after {
   content: "";
   display: table; }

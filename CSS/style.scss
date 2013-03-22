@@ -124,6 +124,25 @@ body {
 		z-index: -900;
 	}
 
+	.project_links {
+		position:absolute;
+		top: 4em;
+		left: -8em;
+		z-index: 100;
+	}
+
+	.project_links li {
+		display: block;
+		font-size: 1.3125em; 
+		line-height: 1.4429em; 
+
+		-webkit-transform: rotate(-15deg) skewX(-14deg);
+		   -moz-transform: rotate(-15deg) skewX(-14deg);
+		    -ms-transform: rotate(-15deg) skewX(-14deg);
+		     -o-transform: rotate(-15deg) skewX(-14deg);
+		        transform: rotate(-15deg) skewX(-14deg);
+	}
+
 	.c_center {
 		width: 40%;
 	}
@@ -194,12 +213,6 @@ html {
 	height: 100%; 
 
 	background: #d3d5ae;
-	// background: -moz-linear-gradient(top, #d3d5ae 0%, #e4edbe 100%) fixed;
-	// background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d3d5ae), color-stop(100%,#e4edbe)) fixed;
-	// background: -webkit-linear-gradient(top, #d3d5ae 0%,#e4edbe 100%) fixed;
-	// background: -o-linear-gradient(top, #d3d5ae 0%,#e4edbe 100%) fixed;
-	// background: -ms-linear-gradient(top, #d3d5ae 0%,#e4edbe 100%) fixed;
-	// background: linear-gradient(to bottom, #d3d5ae 0%,#e4edbe 100%) fixed;
 
 	font-size: 100%; 
 	overflow-y: scroll; /* Force scrollbar in non-IE and Remove iOS text size adjust without disabling user zoom */
@@ -295,23 +308,21 @@ ul, ol {
 
 li ul, li ol {	margin: 0 1.5em}
 
-/* HYPERLINKS */
+
 a {
 	//text-decoration: none; 
 	color:$dark;
 }
-
 a:hover {
 	text-decoration: line-through;
 }
-
 a:focus {
 	outline: thin dotted
 }
-
 a:hover, a:active {
 	outline: none; /* Better CSS Outline Suppression */
 }
+
 
 figure {	margin: 0}
 
@@ -359,7 +370,8 @@ sub, sup {
 sup {	top: -0.5em;}
 sub {	bottom: -0.25em}
 
-/* MICRO CLEARFIX HACK */
+
+/* ------ Clearfix Hack ------ */
 .cf:before, .cf:after {content:"";display:table} /* For modern browsers */
 .cf:after {clear:both}
 .cf {zoom:1} /* For IE 6/7 (trigger hasLayout) */
