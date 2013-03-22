@@ -22,6 +22,12 @@ header {
 	z-index: 4;
 }
 
+article {
+	padding: 1em;
+	font-size: 1.3125em; 
+	line-height: 1.1429em; 
+}
+
 #content {
 	display: block;
 	position: relative;
@@ -75,11 +81,17 @@ object.svg_bracket {
 .project_links {
 	list-style-type: none;
 	text-align: center;
+	margin-top: -2em;
 }
 
 .project_links li {
 	display: inline;
 	font-size: 1.125em;
+}
+
+.week_links {
+	padding-left: 1.5em;
+	list-style-type:none;
 }
 
 .leaf_L, .leaf_R {
@@ -132,6 +144,8 @@ object.svg_bracket {
 
 	.project_links {
 		position:absolute;
+		text-align: left;
+		margin-top: 0;
 		top: 4em;
 		left: -8em;
 		z-index: 100;
@@ -212,19 +226,6 @@ object.svg_bracket {
 	}
 }
 
-/* ------ Desktop ------ */
-@media only screen and (min-width: 1280px) { 
-
-}
-
-/* ------ Widescreen ------ */
-@media only screen and (min-width: 1400px) { 
-	
-}
-
-
-
-
 
 
 /* ------ Base Styles ------ */
@@ -237,11 +238,7 @@ audio[controls],canvas,video {
 }
 
 html {
-	//height: 100%;
-	//width:100%;
-
 	background: #d3d5ae;
-
 	font-size: 100%; 
 	overflow-y: scroll; /* Force scrollbar in non-IE and Remove iOS text size adjust without disabling user zoom */
 	-webkit-text-size-adjust: 100%;
@@ -312,7 +309,7 @@ h6 {
 	margin: 0; 
 	font-size: 1.125em; 
 	line-height: 1.3333em; 
-	margin-bottom: 1.3333em
+	margin-bottom: 0.5em
 } /* 18px / 24px */
 
 p, ul, blockquote, pre, td, th, label {
@@ -351,8 +348,6 @@ a:hover, a:active {
 }
 
 
-figure {	margin: 0}
-
 img, object, embed, video {
 	max-width: 100%;
 	_width: 100%; /* Fluid images */
@@ -377,16 +372,9 @@ svg:not(:root) {overflow: hidden} /* Correct IE9 overflow */
 	text-shadow: none
 }
 
-strong, b, dt { 
-	font-weight: bold
-}
-
-dfn {
-	font-style: italic
-}
-
-var, address {
-	font-style: normal}
+strong, b, dt { 	font-weight: bold}
+dfn {	font-style: italic}
+var, address {	font-style: normal}
 
 sub, sup {
 	font-size: 75%; 
@@ -402,44 +390,3 @@ sub {	bottom: -0.25em}
 .cf:before, .cf:after {content:"";display:table} /* For modern browsers */
 .cf:after {clear:both}
 .cf {zoom:1} /* For IE 6/7 (trigger hasLayout) */
-
-
-
-
-
-/* ------ Print Styles ------ */
-@media print {
-  * {
-  		background: transparent !important; /* Black prints faster */
-  		color: black !important; 
-  		text-shadow: none !important; 
-  		filter:none !important; 
-  		-ms-filter: none !important
-  	}
-
-  a, a:visited {
-  		color: #444 !important; 
-  		text-decoration: underline
-  	}
-
-  a[href]:after {
-  		content: " (" attr(href) ")"
-  	}
-
-  pre, blockquote {
-  		border: 1px solid #999; 
-  		page-break-inside: avoid; 
-  	}
-
-  thead { 	display: table-header-group; } /* Repeat header row at top of each printed page */
-  
-  tr, img {	page-break-inside: avoid; }
-  
-  img {		max-width: 100% !important; }
-
-  @page {	margin: 0.5cm}
-
-  p, h2, h3 {	orphans: 3; widows: 3}
-  
-  h2, h3{	page-break-after: avoid }
-}
