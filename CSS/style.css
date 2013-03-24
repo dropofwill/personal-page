@@ -1,5 +1,8 @@
 /* ------ Variables ------ */
+/* Colors */
+/* Font */
 /* ------ Default Styles ------ */
+/* Layout */
 body {
   width: 100%; }
 
@@ -27,6 +30,33 @@ article {
   margin: 0 auto;
   background: #e4edbe; }
 
+.top {
+  height: 17em;
+  display: block;
+  width: 100%;
+  background: #d3d5ae;
+  z-index: -900; }
+
+.project_links {
+  list-style-type: none;
+  text-align: center;
+  margin-top: -2em; }
+
+.project_links li {
+  display: inline;
+  font-size: 1.125em; }
+
+.week_links {
+  padding-left: 1.5em;
+  list-style-type: none; }
+
+.leaf_L, .leaf_R {
+  display: none; }
+
+.img_right {
+  float: right; }
+
+/* SVG Layout/Manipulation */
 object.svg_header {
   height: 95%;
   width: 95%; }
@@ -55,32 +85,7 @@ object.svg_bracket {
   transform: scaleX(-1);
   filter: FlipH; }
 
-.top {
-  height: 17em;
-  display: block;
-  width: 100%;
-  background: #d3d5ae;
-  z-index: -900; }
-
-.project_links {
-  list-style-type: none;
-  text-align: center;
-  margin-top: -2em; }
-
-.project_links li {
-  display: inline;
-  font-size: 1.125em; }
-
-.week_links {
-  padding-left: 1.5em;
-  list-style-type: none; }
-
-.leaf_L, .leaf_R {
-  display: none; }
-
-.img_right {
-  float: right; }
-
+/* ------ Media Queries -------*/
 /* ------ Mobile Portrait ------ */
 @media only screen and (min-width: 320px) {
   .svg_wrapper {

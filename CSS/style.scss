@@ -1,12 +1,16 @@
 /* ------ Variables ------ */
+/* Colors */
 $dark: #320017;
 $brown: #837B4E;
 $highlight: #E4EDBE;
 $grad-brown: #D3D5AE;
+$rust: #c47529;
 
+/* Font */
 $maven: "Maven Pro", "Century Gothic", sans-serif;
 
 /* ------ Default Styles ------ */
+/* Layout */
 body {
 	width: 100%; 
 }
@@ -38,6 +42,37 @@ article {
 	background: $highlight;
 }
 
+.top {
+	height: 17em;
+	display: block;
+	width:100%;
+	background: $grad-brown;
+	z-index: -900;
+}
+
+.project_links {
+	list-style-type: none;
+	text-align: center;
+	margin-top: -2em;
+}
+
+.project_links li {
+	display: inline;
+	font-size: 1.125em;
+}
+
+.week_links {
+	padding-left: 1.5em;
+	list-style-type:none;
+}
+
+.leaf_L, .leaf_R {
+	display: none;
+}
+
+.img_right { float: right;}
+
+/* SVG Layout/Manipulation */
 object.svg_header {
 	height:95%;
 	width:95%;
@@ -71,36 +106,8 @@ object.svg_bracket {
 	         filter: FlipH;
 }
 
-.top {
-		height: 17em;
-		display: block;
-		width:100%;
-		background: $grad-brown;
-		z-index: -900;
-}
 
-.project_links {
-	list-style-type: none;
-	text-align: center;
-	margin-top: -2em;
-}
-
-.project_links li {
-	display: inline;
-	font-size: 1.125em;
-}
-
-.week_links {
-	padding-left: 1.5em;
-	list-style-type:none;
-}
-
-.leaf_L, .leaf_R {
-	display: none;
-}
-
-.img_right { float: right;}
-
+/* ------ Media Queries -------*/
 /* ------ Mobile Portrait ------ */
 @media only screen and (min-width: 320px) {
 	.svg_wrapper {
@@ -113,7 +120,6 @@ object.svg_bracket {
 	header {
 		height: 20em;
 	}
-
 	.top {
 		height: 22em;
 	}
@@ -220,10 +226,7 @@ object.svg_bracket {
 	}
 }
 
-
-
 /* ------ Base Styles ------ */
-
 html {
 	background: #d3d5ae;
 	font-size: 100%; 
@@ -327,12 +330,12 @@ svg:not(:root) {overflow: hidden}
 
 /* Sets the color of text when selected */
 ::-moz-selection {
-	background: #c47529; 
+	background: $rust; 
 	color: $highlight; 
 	text-shadow: none
 }
 ::selection {
-	background: #c47529; 
+	background: $rust; 
 	color: $highlight; 
 	text-shadow: none
 }
