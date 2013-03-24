@@ -21,6 +21,7 @@ article {
 #content {
   display: block;
   position: relative;
+  left: -1px;
   padding: 1em;
   max-width: 35em;
   margin: 0 auto;
