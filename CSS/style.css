@@ -78,6 +78,9 @@ object.svg_bracket {
 .leaf_L, .leaf_R {
   display: none; }
 
+.img_right {
+  float: right; }
+
 /* ------ Mobile Portrait ------ */
 @media only screen and (min-width: 320px) {
   .svg_wrapper {
@@ -96,8 +99,7 @@ object.svg_bracket {
 
   .top {
     height: 27em; } }
-/* ------ Tablet / Netbook ------ */
-/* ------ Landscape Tablet / Laptop ------ */
+/* ------ Landscape Tablet / Laptop / + ------ */
 @media only screen and (min-width: 1024px) {
   .top {
     background: #837b4e;
@@ -172,14 +174,6 @@ object.svg_bracket {
     margin-top: -2.7em;
     z-index: 3; } }
 /* ------ Base Styles ------ */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, dialog {
-  display: block; }
-
-audio[controls], canvas, video {
-  display: inline-block;
-  *display: inline;
-  zoom: 1; }
-
 html {
   background: #d3d5ae;
   font-size: 100%;
@@ -190,21 +184,19 @@ html {
 body {
   margin: 0;
   min-height: 100%;
+  font: 100%/1.5 "Maven Pro", "Century Gothic", sans-serif;
+  *font-size: 1em;
+  color: #320017;
   -webkit-font-smoothing: antialiased;
   /* Improve default text rendering, handling of kerning pairs and ligatures */
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility; }
 
-body, button, input, select, textarea {
-  font: 100%/1.5 "Maven Pro", "Century Gothic", sans-serif;
-  *font-size: 1em;
-  color: #320017; }
-
-p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldset, menu, img {
+p, ul, img {
   margin: 0 0 1.5em;
   padding: 0; }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h3, h6 {
   font-family: "Maven Pro", "Century Gothic", sans-serif;
   font-weight: 900;
   color: #320017;
@@ -217,13 +209,6 @@ h1 {
   margin-bottom: 0.4em; }
 
 /* 60px / 72px */
-h2 {
-  margin: 0;
-  font-size: 3em;
-  line-height: 1em;
-  margin-bottom: 0.5em; }
-
-/* 48px / 48px */
 h3 {
   margin: 0;
   font-size: 2.25em;
@@ -231,20 +216,6 @@ h3 {
   margin-bottom: 0.6667em; }
 
 /* 36px / 48px */
-h4 {
-  margin: 0;
-  font-size: 1.5em;
-  line-height: 1em;
-  margin-bottom: 1em; }
-
-/* 24px / 24px */
-h5 {
-  margin: 0;
-  font-size: 1.3125em;
-  line-height: 1.1429em;
-  margin-bottom: 1.1429em; }
-
-/* 21px / 24px */
 h6 {
   margin: 0;
   font-size: 1.125em;
@@ -252,20 +223,13 @@ h6 {
   margin-bottom: 0.5em; }
 
 /* 18px / 24px */
-p, ul, blockquote, pre, td, th, label {
+p, ul {
   margin: 0;
   font-size: 1em;
   line-height: 1.5em;
   margin-bottom: 1.5em; }
 
 /* 16px / 24px */
-small, p.small {
-  margin: 0;
-  font-size: 0.875em;
-  line-height: 1.7143em;
-  margin-bottom: 1.7143em; }
-
-/* 14px / 24px */
 ul, ol {
   list-style-position: inside;
   padding: 0; }
@@ -274,63 +238,50 @@ li ul, li ol {
   margin: 0 1.5em; }
 
 a {
-  color: #320017; }
+  color: #320017;
+  text-decoration: none;
+  border-bottom: 1px solid; }
 
 a:hover {
-  text-decoration: line-through; }
+  color: #837b4e;
+  border-bottom-color: #837b4e; }
 
 a:focus {
   outline: thin dotted; }
 
+a:visited {
+  text-decoration: line-through; }
+
 a:hover, a:active {
-  outline: none;
-  /* Better CSS Outline Suppression */ }
+  outline: none; }
 
-img, object, embed, video {
+/* Fluid images */
+img, object {
   max-width: 100%;
-  _width: 100%;
-  /* Fluid images */ }
+  _width: 100%; }
 
+/* Improve IE's resizing of images */
 img {
   border: 0;
-  -ms-interpolation-mode: bicubic;
-  /* Improve IE's resizing of images */ }
+  -ms-interpolation-mode: bicubic; }
 
+/* Correct IE9 overflow */
 svg:not(:root) {
   overflow: hidden; }
 
-/* Correct IE9 overflow */
+/* Sets the color of text when selected */
 ::-moz-selection {
   background: #c47529;
-  color: #fff;
+  color: #e4edbe;
   text-shadow: none; }
 
 ::selection {
   background: #c47529;
-  color: #fff;
+  color: #e4edbe;
   text-shadow: none; }
 
-strong, b, dt {
+b {
   font-weight: bold; }
-
-dfn {
-  font-style: italic; }
-
-var, address {
-  font-style: normal; }
-
-sub, sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-  /* Position 'sub' and 'sup' without affecting line-height */ }
-
-sup {
-  top: -0.5em; }
-
-sub {
-  bottom: -0.25em; }
 
 /* ------ Clearfix Hack ------ */
 .cf:before, .cf:after {
